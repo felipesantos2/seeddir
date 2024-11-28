@@ -17,4 +17,6 @@
  */
 
 
+defined(ABSPATH) || throw new Exception('Constane não definida');
+
 define('BASE_PATH', __DIR__);
