@@ -1,4 +1,4 @@
-<form action="/" method="POST">
+<form action="/" method="POST" id="email_send_form">
     <table class="form-table">
         <tbody>
             <tr>
