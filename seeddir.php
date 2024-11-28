@@ -32,9 +32,9 @@ function seeddir_add_admin_menu()
 {
     add_menu_page(
         'Include Text',     // page title
-        'Enviar Emails',     // menu title
+        'E-mails Send',     // menu title
         'manage_options',   // capability
-        'include-text',     // menu slug
+        'emails-send',     // menu slug
         function () {
             
             global $title;
@@ -42,6 +42,8 @@ function seeddir_add_admin_menu()
             echo '<div class="wrap">';
 
                 echo "<h1>$title</h1>";
+
+                require __DIR__ . '/admin/list-emails' . '.php';
 
             echo '</div>';
         } // callback function
