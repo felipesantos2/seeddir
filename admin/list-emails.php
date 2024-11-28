@@ -1,4 +1,7 @@
-<form action="/" method="POST" id="email_send_form">
+
+<?php require __DIR__ . '/form-validate/list-emails-validate.php' ?>
+
+<form action="<?php esc_url($_SERVER['REQUEST_URI']) ?>" method="POST" id="email_send_form">
     <table class="form-table">
         <tbody>
             <tr>
@@ -6,31 +9,63 @@
                     <label for="email">Destino</label>
                 </th>
                 <td>
-                    <input name="email" type="email" id="email" value="felipe@rkms.com.br" class="regular-text">
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        value="felipe@rkms.com.br"
+                        class="regular-text"
+                        value="<?php echo esc_attr($email) ?>" />
                 </td>
-            </tr>
+            </tr> <!--end row-->
             <tr>
                 <th scope="row">
                     <label for="subject">Assunto</label>
                 </th>
                 <td>
-                    <input name="subject" type="text" id="subject" class="regular-text">
+                    <input
+                        type="text"
+                        name="subject"
+                        id="subject"
+                        class="regular-text"
+                        value="<?php echo esc_attr($subject) ?>">
                 </td>
-            </tr>
+            </tr> <!--end row-->
             <tr>
                 <th scope="row">
                     <label for="message">Mensagem</label>
                 </th>
                 <td>
-                    <input name="message" type="text" id="message" class="regular-text">
+                    <textarea
+                        type="text"
+                        name="message"
+                        id="message"
+                        class="regular-text"
+                        value="<?php echo esc_attr($message) ?>"
+                        cols="30"
+                        rows="10"></textarea>
                 </td>
-            </tr>
+            </tr> <!--end row-->
+
+            <tr style="display: none;">
+                <th scope="row">
+                    <label for="message">validate</label>
+                </th>
+                <td>
+                    <input
+                        type="text"
+                        name="submit_validate"
+                        id="submit_validate"
+                        hidden
+                        value="1">
+                </td>
+            </tr> <!--end row-->
 
             <tr>
                 <td style="padding-left: 0;">
                     <button type="submit" class="button button-primary" id="submit_email"> Enviar </button>
                 </td>
-            </tr>
+            </tr> <!--end row-->
         </tbody>
     </table>
 </form>
