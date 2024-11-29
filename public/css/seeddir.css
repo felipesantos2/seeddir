@@ -1,0 +1,34 @@
+/* */
+li.toplevel_page_emails-send .wp-menu-image img {
+    width: 20px;
+}
+
+.wrap .flex {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#email_send_form {
+    width: 45%;
+}
+
+#email_send_form table input,
+#email_send_form table textarea {
+    max-width: 100%;
+    width: 100%;
+    border: 1px solid #acb;
+    border-radius: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#email_send_form table textarea {
+    resize: none;
+}
+
+#email_send_form table input {
+    padding: 7px 7px;
+}
+
+#email_send_form table button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

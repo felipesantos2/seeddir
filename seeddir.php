@@ -26,6 +26,18 @@ if (!defined('ABSPATH')) {
 define('BASE_PATH', __DIR__);
 
 
+
+
+// add  public/css/seeddir.css
+add_action('admin_enqueue_scripts', function () {
+    wp_enqueue_style(
+        'seeddir-css',
+        plugin_dir_url(__FILE__) . '/public/css/seeddir.css',
+        array(),
+        microtime()
+    );
+});
+
 add_action('admin_menu', 'seeddir_add_admin_menu');
 
 function seeddir_add_admin_menu()
@@ -36,7 +48,11 @@ function seeddir_add_admin_menu()
         'manage_options',   // capability
         'emails-send',     // menu slug
         function () {
-            
+
+            if (!current_user_can('manage_options')) {
+                return;
+            }
+
             global $title;
 
             echo '<div class="wrap">';
