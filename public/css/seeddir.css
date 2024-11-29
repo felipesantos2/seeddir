@@ -1,4 +1,5 @@
-/* */
+/* Customizing styles in the admin panel */
+
 li.toplevel_page_emails-send .wp-menu-image img {
     width: 20px;
 }
@@ -6,6 +7,7 @@ li.toplevel_page_emails-send .wp-menu-image img {
 .wrap .flex {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 #email_send_form {
