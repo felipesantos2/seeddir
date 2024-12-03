@@ -23,7 +23,7 @@ function seeddir_emails_page()
 
         echo "<h1>$title</h1>";
 
-        require __DIR__ . '/admin/list-emails' . '.php';
+        require __DIR__ . '/admin/email/email-create' . '.php';
 
     echo '</div>';
 }
@@ -56,15 +56,17 @@ function seeddir_add_admin_menu()
         'E-mails Send',             // menu title
         'manage_options',           // capability
         'emails-send',              // menu slug
-        'seeddir_emails_page'       // calback function
+        'seeddir_emails_page',       // calback function
+        'dashicons-email-alt'
     );
 
     add_menu_page(
-        'Order Posts',
-        'Ordene os Posts',
+        'Post Order',
+        'Post Order',
         'manage_options',
-        'posts-order',
-        'seeddir_post_type_order_page'
+        'post-order',
+        'seeddir_post_type_order_page',
+        'dashicons-editor-ol'
     );
 }
 

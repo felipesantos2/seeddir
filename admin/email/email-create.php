@@ -29,6 +29,7 @@
                             type="text"
                             name="subject"
                             id="subject"
+                            value="felipe@rkms.com.br"
                             class="regular-text"
                             value="<?php echo esc_attr($subject) ?>">
                     </td>
@@ -44,7 +45,8 @@
                             id="message"
                             class="regular-text"
                             value="<?php echo esc_attr($message) ?>"
-                            rows="15"></textarea>
+                            rows="15"> Lorem ipsum dolor met
+                        </textarea>
                     </td>
                 </tr> <!--end row-->
 
