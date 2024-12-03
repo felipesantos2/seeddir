@@ -17,7 +17,7 @@
                             id="email"
                             value="felipe@rkms.com.br"
                             class="regular-text"
-                            value="<?php echo esc_attr($email) ?>" />
+                            value="<?php echo esc_attr($email) ?>">
                     </td>
                 </tr> <!--end row-->
                 <tr>
@@ -81,6 +81,3 @@
     </div>
 
 </div>
-
-
-<div class="sent"></div>
