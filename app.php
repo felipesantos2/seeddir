@@ -67,3 +67,5 @@ function seeddir_add_admin_menu()
         'seeddir_post_type_order_page'
     );
 }
+
+// capabilities - roles - permissions - authentication - authorization
